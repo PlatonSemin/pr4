@@ -9,11 +9,20 @@
             padding: 0;
             background-color: #7aceff;
         }
+         .soln {
+            
+            width: 140px;
+            height: 140px;  
+            background-color: rgb(204, 201, 2);
+            border-radius: 50%;
+            margin:10% 80%;
+            
+        }
         .road {
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 80px;
+            height: 100px;
             background-color: #2e2d2d;
             border-top: 10px solid white;
         }
@@ -23,9 +32,11 @@
             position: absolute;
             bottom: 80px;
             left: -200px;
-            animation: Come-On 3s forwards;
+            animation: Comeon 3s forwards;
+            animation-delay: 1s;    
+            animation-timing-function: ease-in-out;
         }
-        .car-bottom {
+        .carbot {
             position: absolute;
             bottom: 0;
             width: 200px;
@@ -42,11 +53,19 @@
             background-color: #ff5e00;
             border-radius: 10px 30px 0 0;
         }
-    
+        .gruz {
+            position: absolute;
+            top: 0;
+            left: 5px;
+            width: 90px;
+            height: 40px;
+            background-color: #050127;
+            border-radius: 5px 5px 0 0;
+        }       
         .steklo {
             position: absolute;
             background-color: #bfe6f5;
-            border: 3px solid black;
+            border: 3px solid rgb(22, 2, 204);
             top: 10px;
 
             width: 40px;
@@ -62,24 +81,67 @@
             position: absolute;
             bottom: -15px;            
         }
+        .disk {
+            width: 20px;
+            height: 20px;
+            background-color: rgb(226, 226, 226);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -5px;            
+        }
+        .tree {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -50px;
+            left: 250px;
+        }
+        .stvol {
+            width: 30px;
+            height: 40px;
+            background-color: #8B4513; 
+            position: absolute;    }
+
+        .listv {
+            width: 140px;
+            height: 200px;
+            background-color: #228B22; 
+            border-radius: 50%; 
+            position: absolute;
+            bottom: -5px; 
+        }
+
         .wheel-1 { left: 25px; }
+        .disk-1 { left: 35px; }
         .wheel-2 { right: 25px; }
+        .disk-2 { right: 35px; }
         
-        @keyframes Come-On {
+        @keyframes Comeon {
             from { left: -200px; }
-            to { left: calc(100% - 250px); }			
+            to { left: calc(100% - 200px - 50px); }			
         }
     </style>
 </head>
 <body>
-    <div class="road"></div>
+    <div class="road">
+<div class="tree">
+        <div class="stvol"></div>
+        <div class="listv"></div>
+    </div>
+    </div>
+    <div class="soln"></div>
+    
     <div class="car">
         <div class="cabina">            
             <div class="steklo"></div>
         </div>
-        <div class="car-bottom"></div>
+        <div class="carbot"></div>
+        <div class="gruz"></div>
         <div class="wheel wheel-1"></div>
+        <div class="disk disk-1"></div>
         <div class="wheel wheel-2"></div>
+        <div class="disk disk-2"></div>
     </div>
 </body>
 </html>
